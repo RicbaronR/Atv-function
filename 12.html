@@ -5,6 +5,22 @@
     */
 
     //Entrada
+    function verificar(num){
+        if(num%2 === 0){
+            return `O número ${num} é par.`;
+        } else{
+            return `O número ${num} é ímpar.`;
+        }
+    }
+
+    let num = parseInt(prompt(`Informe um número inteiro:`));
+    while(isNaN(num)){
+        num = parseInt(prompt(`Informe um número inteiro:`));
+    }
+    let resultado = verificar(num);
+
+    document.write(resultado);
+
 
 
     //Processamento

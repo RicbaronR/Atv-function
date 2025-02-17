@@ -6,7 +6,19 @@
     */
 
     //Entrada
-
+    let repeticoes = 0;
+    function repeticao(frase, letra){
+        for(caracteres of frase){
+            if(caracteres === letra){
+                repeticoes++
+            }
+        }
+        return repeticoes;
+    }
+    let frase = prompt(`Informe uma frase:`).toLowerCase().replaceAll(" ", "");
+    let letra = prompt(`Informe a letra que deseja verificar quantas vezes aparaceu:`).toLowerCase();
+    let resultado = repeticao(frase, letra);
+    document.write(`A letra "${letra}" apareceu ${repeticoes} vezes na frase informada.`)
 
     //Processamento
 
