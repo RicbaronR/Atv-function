@@ -8,21 +8,22 @@
 
     //Entrada
     let palavrasVogais = `aeiou`;
-    let quanVogais = 0;
     
     function detectorVogais(vogais){
+        let quanVogais = 0;
         for(caracteres of vogais){
             if(palavrasVogais.includes(caracteres)){
                 quanVogais++
             }
         }
+        return quanVogais;
     }
     let palavraInfo = prompt(`Informe uma palavra:`).toLowerCase().trim();
     while(!isNaN(palavraInfo)){
         palavraInfo = prompt(`Informe uma palavra:`).toLowerCase().trim();
     }
-    detectorVogais(palavraInfo);
-    document.write(`Na palvra ${palavraInfo} há ${quanVogais} apareções das vogais.`);
+    let resultado = detectorVogais(palavraInfo);
+    document.write(`Na palavra "${palavraInfo}" há ${resultado} apareções das vogais.`);
 
     
 
@@ -30,5 +31,6 @@
 
 
     //Saída
+    
 
 </script>
